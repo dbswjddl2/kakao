@@ -1,0 +1,38 @@
+body{margin: 0px;padding: 0px; background: gray;}
+#page{width: 960px; height: 1200px; 
+background: white;margin: 0px auto; margin-top: 50px;padding: 20px;
+box-shadow: 10px 10px 10px black;}
+#content{height:900px;}
+#top{padding:20px;background:pink;}
+#bottom{text-align: center;}
+a{text-decoration: none; font-size: 20px;color:rgb(133, 133, 204);}
+a:hover{background:rgb(151, 219, 151);color:hotpink;padding: 5px;}
+.subject{text-align: center;margin-right: 70px;}
+#divSearch{border: 2px solid pink; width:920px; padding:5px; text-align: center;}
+
+table{width:933px;margin:0px auto;border-collapse:collapse;margin-right:30px;}/*collapse속성은 충돌해라*/
+td{border:1px solid pink;padding:5px}
+.title{text-align: center;;background:pink;color: white;}
+#divPage{width:920px;text-align: center; padding:10px;}
+
+#darken-background {
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    height:100%;
+    display:none;
+    background:rgba(0, 0, 0, 0.5);
+    z-index:10000;
+    overflow-y:scroll;
+}
+#lightbox {
+    width:700px;
+    margin:20px auto;
+    padding:15px;
+    border: 1px solid #333333;
+    border-radius:5px;
+    background:white;
+    box-shadow:0px 5px 5px rgba(34, 25, 25, 0.4);
+    text-align:center;
+}

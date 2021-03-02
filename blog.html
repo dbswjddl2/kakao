@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>블로그검색</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+
+    </head>
+    <body>
+        <div id="page">
+            <div id="top">
+                <a href="blog.html">블로그검색</a>&nbsp;&nbsp;&nbsp;
+                <a href="book.html">도서검색</a>&nbsp;&nbsp;&nbsp;
+                <a href="local.html">지역검색</a>&nbsp;&nbsp;&nbsp;
+            </div>
+            <div id="content">
+                <h1 class="subject">[블로그검색]</h1>
+                <div id="divSearch">
+                    <input type="text" id="txtQuery" value="자바">
+                    <input type="button" id="btnSearch" value="검색">
+                    <select id="selSize">
+                        <option value=5>5행씩출력</option>
+                        <option value=10 selected>10행씩출력</option>
+                        <option value=15>15행씩출력</option>
+                        <option value=20>20행씩출력</option>
+                    </select>
+                </div>
+                <table id="tbl"></table>
+                <script id="temp" type="text/x-handlebars-template">  <!--틀을 찍어줄때!-->
+                    <tr class="title">
+                        <td>제목</td>
+                    </tr>   
+                    {{#each documents}} <!--반복해서 documents에 값을 가져온다.-->
+                    <tr class="row">
+                        <td><a href="{{url}}">{{{title}}}</a></td>
+                    </tr>
+                    {{/each}}    
+                </script>
+                <div id="divPage">
+                    <button id="btnPre">◀</button>
+                    <span id="spanPage"></span>
+                    <button id="btnNext">▶</button>
+                </div>
+            </div>
+            <div id="bottom">
+                <h3>작성자:인천일보아카데미 홍길동</h3>
+            </div>
+            </div>
+    </body>
+    <script>
+        var url="https://dapi.kakao.com/v2/search/blog";
+    </script>
+    <script src="script.js"></script>
+</html>
